@@ -1,10 +1,24 @@
 import json
 import os
+import subprocess
 
 import pandas as pd
 
 import config
 from engine import metrics
+
+
+def code_version():
+    """Short git commit hash, plus '-dirty' if code changed since that commit."""
+    try:
+        commit = subprocess.check_output(
+            ["git", "rev-parse", "--short", "HEAD"], text=True).strip()
+        changes = subprocess.check_output(
+            ["git", "status", "--porcelain", "--", ".", ":(exclude)results"],
+            text=True).strip()
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        return "unknown"
+    return commit + ("-dirty" if changes else "")
 
 
 def save_run(strategy, df, trades, equity_curve, dataset_version):
@@ -21,6 +35,7 @@ def save_run(strategy, df, trades, equity_curve, dataset_version):
         "symbol": config.SYMBOL,
         "timeframe": config.TIMEFRAME,
         "dataset_version": dataset_version,
+        "code_version": code_version(),
         "bars": len(df),
         "first_bar": str(df["timestamp"].iloc[0]),
         "last_bar": str(df["timestamp"].iloc[-1]),
