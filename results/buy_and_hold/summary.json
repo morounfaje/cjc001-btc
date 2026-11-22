@@ -1,0 +1,23 @@
+{
+  "strategy": "buy_and_hold",
+  "parameters": {},
+  "symbol": "BTC-USD",
+  "timeframe": "1h",
+  "dataset_version": "204fc71a4df998e4",
+  "code_version": "3f52f58",
+  "bars": 12997,
+  "first_bar": "2024-11-11 23:00:00+00:00",
+  "last_bar": "2026-05-14 12:00:00+00:00",
+  "holdout_fraction": 0.25,
+  "starting_cash": 10000,
+  "fee_rate": 0.001,
+  "slippage": 0.0005,
+  "total_return": -0.10274103540823125,
+  "max_drawdown": -0.5029335034363809,
+  "sharpe": 0.08151938901846988,
+  "trade_count": 0,
+  "win_rate": 0.0,
+  "avg_win": 0.0,
+  "avg_loss": 0.0,
+  "avg_trade": 0.0
+}

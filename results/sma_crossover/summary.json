@@ -1,0 +1,26 @@
+{
+  "strategy": "sma_crossover",
+  "parameters": {
+    "fast": 20,
+    "slow": 50
+  },
+  "symbol": "BTC-USD",
+  "timeframe": "1h",
+  "dataset_version": "204fc71a4df998e4",
+  "code_version": "3f52f58",
+  "bars": 12997,
+  "first_bar": "2024-11-11 23:00:00+00:00",
+  "last_bar": "2026-05-14 12:00:00+00:00",
+  "holdout_fraction": 0.25,
+  "starting_cash": 10000,
+  "fee_rate": 0.001,
+  "slippage": 0.0005,
+  "total_return": -0.559505201256609,
+  "max_drawdown": -0.6167748504809851,
+  "sharpe": -1.6537234767965545,
+  "trade_count": 150,
+  "win_rate": 0.29333333333333333,
+  "avg_win": 142.13582413043105,
+  "avg_loss": -111.7832856066514,
+  "avg_trade": -37.300346750440596
+}
